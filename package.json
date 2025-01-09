@@ -12,8 +12,13 @@
     "format": "prettier --write src/"
   },
   "dependencies": {
-    "pinia": "^2.1.7",
+    "@pinia/colada": "^0.13.2",
+    "@vue-icons-plus/all-files": "^0.1.0",
+    "fa’": "link:‘@vue-icons-plus/fa’",
+    "ofetch": "^1.4.1",
+    "pinia": "^2.2.4",
     "vue": "^3.4.29",
+    "vue-icons-plus": "^0.1.8",
     "vue-router": "^4.3.3"
   },
   "devDependencies": {

@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import Logo from '@/assets/logo.svg'
-import BiliIcon from '@/assets/BiliBili_TV_Icon.svg'
+import { LogoGithub, MailOutline, PlayOutline } from '@vicons/ionicons5'
+import biliLogo from '@/assets/bilibiliIcon.svg'
 
-import { LogoGithub, MailOutline } from '@vicons/ionicons5'
 </script>
 
 <template>
@@ -17,7 +17,7 @@ import { LogoGithub, MailOutline } from '@vicons/ionicons5'
         <i>ATOM IT CLUB</i>
         <div class="links">
           <a href="https://bilibili.com">
-            <BiliIcon class="bili"></BiliIcon>
+            <biliLogo />
           </a>
           <a href="mailto:chengruichen3@gmail.com">
             <MailOutline></MailOutline>
@@ -26,6 +26,11 @@ import { LogoGithub, MailOutline } from '@vicons/ionicons5'
             <LogoGithub></LogoGithub>
           </a>
         </div>
+        <a href="https://atom.koch2333.cn/animation" target="_blank">
+          <n-button icon-placement="left" secondary strong >
+          <n-icon><PlayOutline /></n-icon>
+            2024秋季招新动画
+        </n-button></a>
       </div>
     </div>
   </main>
@@ -64,11 +69,14 @@ ul {
   width: 70%;
   height: 40vh;
   margin: 10vh auto;
+  justify-content: center;
 }
 
 .logo {
   flex: 1;
   margin: 2rem 0;
+  display: flex;
+  align-items: center;
 }
 
 .introduction {
@@ -94,29 +102,28 @@ ul {
   color: var(--color-heading);
 }
 
-.links a svg.bili {
-  color: #00b3fa;
-}
+.bili {
+  @media screen and (max-width: 700px) {
+    .overview {
+      display: block;
+    }
 
-@media screen and (max-width: 700px) {
-  .overview {
-    display: block;
-  }
+    .divider {
+      display: none;
+    }
 
-  .divider {
-    display: none;
-  }
+    main {
+      margin: 1rem 0;
+    }
 
-  main {
-    margin: 1rem 0;
-  }
 
-  .logo svg {
-    margin: auto;
-    border-radius: 50%;
-    width: 5rem;
-    height: 5rem;
-    display: block;
+    .logo svg {
+      margin: auto;
+      border-radius: 50%;
+      width: 5rem;
+      height: 5rem;
+      display: block;
+    }
   }
 }
 </style>
